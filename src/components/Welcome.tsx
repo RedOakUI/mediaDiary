@@ -92,13 +92,13 @@ function Welcome(): JSX.Element {
   function login() {
     const provider = new fuego.auth.GoogleAuthProvider();
     provider.setCustomParameters({ prompt: "select_account" });
-    fuego
-      .auth()
-      .setPersistence(fuego.auth.Auth.Persistence.LOCAL)
-      .then(() => {
-        setCookie(null, "fuegoPending", "true", {});
-        fuego.auth().signInWithRedirect(provider);
-      });
+    // fuego
+    //   .auth()
+    //   .setPersistence(fuego.auth.Auth.Persistence.LOCAL)
+    //   .then(() => {
+    //     setCookie(null, "fuegoPending", "true", {});
+    //     fuego.auth().signInWithRedirect(provider);
+    //   });
   }
 }
 export default Welcome;
